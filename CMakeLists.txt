@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
+include_directories("C:/face_swap/caffe/build/install/include")
 project(face_segmentation)
 
 # Set version
@@ -36,6 +37,10 @@ option(BUILD_INTERFACE_PYTHON "Build interface for Python" ON)
 # ===================================================
 
 # Boost
+#set(BOOST_ROOT ${CMAKE_CURRENT_LIST_DIR} CACHE PATH "")
+#set(BOOST_INCLUDEDIR C:/boost/include/boost-1_66 CACHE PATH "")
+#set(BOOST_LIBRARYDIR C:/boost/lib CACHE PATH "")
+
 set(Boost_USE_STATIC_LIBS ${WITH_BOOST_STATIC})
 set(BOOST_ALL_DYN_LINK NOT ${WITH_BOOST_STATIC})
 if(WIN32)
